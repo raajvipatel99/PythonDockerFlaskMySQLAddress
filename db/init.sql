@@ -2,9 +2,10 @@ CREATE DATABASE addressData;
 USE addressData;
 
 CREATE TABLE IF NOT EXISTS addresses (
-    `id` VARCHAR(21) CHARACTER SET utf8,
-    `fname` VARCHAR(8) CHARACTER SET utf8,
-    `lname` VARCHAR(32) CHARACTER SET utf8,
+    `id` int AUTO_INCREMENT primary key ,
+    `fname` VARCHAR(21) CHARACTER SET utf8,
+    `lname` VARCHAR(8) CHARACTER SET utf8,
+    `address` VARCHAR(32) CHARACTER SET utf8,
     `city` VARCHAR(11) CHARACTER SET utf8,
     `state` VARCHAR(3) CHARACTER SET utf8,
     `zipcode` INT
