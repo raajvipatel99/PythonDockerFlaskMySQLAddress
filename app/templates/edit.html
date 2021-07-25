@@ -1,42 +1,34 @@
 {% extends "layout.html" %}
 {% block content %}
-<form action="/edit/{{city.id}}" method="post">
+<form action="/edit/{{addresses.id}}" method="post">
     <div class="row">
         <div class="col">
-            <label for="fldName">City Name</label>
-            <input id="fldName" type="text" class="form-control" placeholder="City Name" name="fldName" value="{{city.fldName}}">
+            <label for="fname">First Name</label>
+            <input id="fname" type="text" class="form-control" placeholder="First Name" name="fname" value="{{addresses.fname}}">
         </div>
         <div class="col">
-            <label for="fldAbbreviation">City Abbreviation</label>
-            <input id="fldAbbreviation" type="text" class="form-control" placeholder="City Abbreviation"
-                   name="fldAbbreviation" value="{{city.fldAbbreviation}}">
+            <label for="lname">Last Name</label>
+            <input id="lname" type="text" class="form-control" placeholder="Last Name"
+                   name="lname" value="{{addresses.lname}}">
         </div>
         <div class="col">
-            <label for="fldCountry">City Country</label>
-            <input id="fldCountry" type="text" class="form-control" placeholder="City Country" name="fldCountry" value="{{city.fldCountry}}">
+            <label for="address">Address</label>
+            <input id="address" type="text" class="form-control" placeholder="Address" name="address" value="{{addresses.address}}">
         </div>
     </div>
 
     <div class="row">
         <div class="col">
-            <label for="fldLat">City Latitude</label>
-            <input id="fldLat" type="text" class="form-control" placeholder="City Latitude" name="fldLat" value="{{city.fldLat}}">
-        </div>
-        <div class="col">
-            <label for="fldlong">City Longitude</label>
-            <input id="fldlong" type="text" class="form-control" placeholder="City Longitude" name="fldLong" value="{{city.fldLong}}">
+            <label for="state">State</label>
+            <input id="state" type="text" class="form-control" placeholder="State" name="state" value="{{addresses.state}}">
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <label for="fldCapitalStatus">Capital Status</label>
+            <label for="zipcode">Zip Code</label>
 
-            <input id="fldCapitalStatus" type="text" class="form-control" placeholder="Capital Status"
-                   name="fldCapitalStatus" value="{{city.fldCapitalStatus}}">
-        </div>
-        <div class="col">
-            <label for="fldPopulation">City Population</label>
-            <input id="fldPopulation" type="text" class="form-control" placeholder="Population" name="fldPopulation" value="{{city.fldPopulation}}">
+            <input id="zipcode" type="text" class="form-control" placeholder="Zip Code"
+                   name="zipcode" value="{{addresses.zipcode}}">
         </div>
     </div>
     <button type="submit" class="btn btn-success">Save</button>

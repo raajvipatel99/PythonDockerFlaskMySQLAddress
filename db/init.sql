@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS addresses (
     `state` VARCHAR(3) CHARACTER SET utf8,
     `zipcode` INT
 );
-INSERT INTO addresses VALUES
+INSERT INTO addresses(fname,lname,address,state,city,zipcode) VALUES
     ('Jack','McGinnis','220 hobo Av.','Phila',' PA',09119),
     ('John "Da Man"','Repici','120 Jefferson St.','Riverside',' NJ',08075),
     ('Stephen','Tyler','7452 Terrace "At the Plaza" road','SomeTown','SD', 91234),
