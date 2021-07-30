@@ -54,12 +54,12 @@ def form_update_post(address_id):
     return redirect("/", code=302)
 
 # hereeeeee
-@app.route('/address/new', methods=['GET'])
+@app.route('/addresses/new', methods=['GET'])
 def form_insert_get():
     return render_template('new.html', title='New Address Form')
 
 # hereeeeee
-@app.route('/address/new', methods=['POST'])
+@app.route('/addresses/new', methods=['POST'])
 def form_insert_post():
     cursor = mysql.get_db().cursor()
     inputData = (request.form.get('fname'), request.form.get('lname'), request.form.get('address'),
