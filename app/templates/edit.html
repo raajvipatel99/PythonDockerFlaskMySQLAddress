@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/edit/{{addresses.id}}" method="post">
+    <div class="row">
+        <div class="col">
+            <label for="fname">First Name</label>
+            <input id="fname" type="text" class="form-control" placeholder="First Name" name="fname" value="{{addresses.fname}}">
+        </div>
+        <div class="col">
+            <label for="lname">Last Name</label>
+            <input id="lname" type="text" class="form-control" placeholder="Last Name"
+                   name="lname" value="{{addresses.lname}}">
+        </div>
+        <div class="col">
+            <label for="address">Address</label>
+            <input id="address" type="text" class="form-control" placeholder="Address" name="address" value="{{addresses.address}}">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="state">State</label>
+            <input id="state" type="text" class="form-control" placeholder="State" name="state" value="{{addresses.state}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="zipcode">Zip Code</label>
+
+            <input id="zipcode" type="text" class="form-control" placeholder="Zip Code"
+                   name="zipcode" value="{{addresses.zipcode}}">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+
+</form>
+{% endblock %}
